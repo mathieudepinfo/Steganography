@@ -1,0 +1,6 @@
+include_directories (${PROJECT_SOURCE_DIR}/SteganographyLib)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+link_directories(${LIBD} ${LIB})
+add_executable(PartA_encoder PartA.cpp)
+target_link_libraries( PartA_encoder debug ${OpenCV_LIBD} optimized ${OpenCV_LIB} )
+target_link_libraries( PartA_encoder debug ${LIBD}/SteganographyLib.lib optimized ${LIB}/SteganographyLib.lib )
